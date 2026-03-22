@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>般若波罗蜜多心经 - 白话文翻译</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Noto Serif SC", "Songti SC", "SimSun", serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            color: #e8e8e8;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            background: linear-gradient(45deg, #ffd700, #ffaa00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+        }
+
+        .subtitle {
+            color: #aaa;
+            font-size: 1.1em;
+        }
+
+        .intro {
+            background: rgba(255, 215, 0, 0.1);
+            padding: 25px 30px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            border-left: 4px solid #ffd700;
+        }
+
+        .intro h2 {
+            color: #ffd700;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .intro p {
+            color: #ccc;
+            text-align: justify;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            padding: 35px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .section h2 {
+            color: #ffd700;
+            font-size: 1.5em;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .verse {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            transition: background 0.3s ease;
+        }
+
+        .verse:hover {
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .verse-number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(45deg, #ffd700, #ff8c00);
+            color: #1a1a2e;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            margin-right: 15px;
+            font-size: 0.9em;
+        }
+
+        .original {
+            font-size: 1.2em;
+            color: #f0f0f0;
+            margin-bottom: 15px;
+            padding-left: 45px;
+            letter-spacing: 2px;
+        }
+
+        .translation {
+            color: #b8b8b8;
+            padding-left: 45px;
+            font-style: italic;
+            position: relative;
+        }
+
+        .translation::before {
+            content: "📖";
+            position: absolute;
+            left: 10px;
+            top: 0;
+        }
+
+        .key-terms {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .term-card {
+            background: rgba(255, 215, 0, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .term-card h3 {
+            color: #ffd700;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .term-card p {
+            color: #aaa;
+            font-size: 0.95em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        .heart {
+            color: #ffd700;
+            font-size: 1.2em;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .original, .translation {
+                padding-left: 15px;
+            }
+
+            .verse-number {
+                margin-bottom: 10px;
+            }
+
+            .original {
+                margin-bottom: 10px;
+            }
+
+            .section {
+                padding: 20px;
+            }
+        }
+
+        /* 打印样式 */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .section {
+                break-inside: avoid;
+                border: 1px solid #ccc;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>般若波罗蜜多心经</h1>
+            <p class="subtitle">梵文音译 · 玄奘法师译 · 白话文解读</p>
+        </header>
+
+        <div class="intro">
+            <h2>📜 经文简介</h2>
+            <p>
+                《般若波罗蜜多心经》简称《心经》，是大乘佛教最核心的经典之一。
+                全经仅260字（玄奘译本），却是六百卷《大般若经》的精髓所在。
+                经文阐述了"诸法性空"的般若智慧，主张通过觉悟空性来解脱一切苦难。
+                观世音菩萨在经中示现，以般若智慧观照五蕴皆空，为舍利子详细解说般若波罗蜜多之法门。
+            </p>
+        </div>
+
+        <section class="section">
+            <h2>🕊️ 心经白话文翻译</h2>
+
+            <div class="verse">
+                <span class="verse-number">1</span>
+                <div class="original">
+                    观自在菩萨，行深般若波罗蜜多时，照见五蕴皆空，度一切苦厄。
+                </div>
+                <div class="translation">
+                    当观世音菩萨深入修习般若智慧时，他清楚地看到组成我们身心的五种要素（色、受、想、行、识）都是空的，于是超越了一切痛苦和灾难。
+                </div>
+            </div>
+
+            <div class="verse">
+                <span class="verse-number">2</span>
+                <div class="original">
+                    舍利子，色不异空，空不异色，色即是空，空即是色，受想行识，亦复如是。
+                </div>
+                <div class="translation">
+                    舍利子啊，物质（色）和空性不是两个不同的东西，空性也不异于物质。物质本身就是空性，空性本身就是物质。我们对世界的感受、想法、行为和意识，也都是一样的道理。
+                </div>
+            </div>
+
+            <div class="verse">
+                <span class="verse-number">3</span>
+                <div class="original">
+                    舍利子，是诸法空相，不生不灭，不垢不净，不增不减。
+                </div>
+                <div class="translation">
+                    舍利子啊，所有事物的本质都是空性的，这种空性没有生也没有灭，没有污垢也没有清净，不会增加也不会减少。
+                </div>
+            </div>
+
+            <div class="verse">
+                <span class="verse-number">4</span>
+                <div class="original">
+                    是故空中无色，无受想行识，无眼耳鼻舌身意，无色声香味触法，无眼界乃至无意识界。
+                </div>
+                <div class="translation">
+                    因此，在空性之中没有物质，也没有感受、想法、行为和意识。没有眼、耳、鼻、舌、身体和意识，没有颜色、声音、香气、味道、触感，没有看到的景象乃至没有意识所想到的一切。
+                </div>
+            </div>
+
+            <div class="verse">
+                <span class="verse-number">5</span>
+                <div class="original">
+                    无无明，亦无无明尽，乃至无老死，亦无老死尽。
+                </div>
+                <div class="translation">
+                    没有无明（对真理的无知），也没有无明的消失。乃至没有衰老和死亡，也没有衰老和死亡的结束。
+                </div>
+            </div>
+
+            <div class="verse">
+                <span class="verse-number">6</span>
+                <div class="original">
+                    无苦集灭道，无智亦无得。
+                </div>
+                <div class="translation">
+                    没有苦、没有苦的原因、没有苦的止息、没有灭除苦的方法。也没有智慧可求，也没有东西可得到。
+                </div>
+            </div>
+
+            <div class="verse">
+                <span class="verse-number">7</span>
+                <div class="original">
+                    以无所得故，菩提萨埵，依般若波罗蜜多故，心无挂碍，无挂碍故，无有恐怖。
+                </div>
+                <div class="translation">
+                    因为没有什么可以执著和得到的缘故，菩萨依照般若波罗蜜多的教导，心中没有任何牵挂和障碍。因为没有牵挂和障碍，所以没有什么好害怕的。
+                </div>
+            </div>
+
+            <div class="verse">
+                <span class="verse-number">8</span>
+                <div class="original">
+                    远离颠倒梦想，究竟涅槃。
+                </div>
+                <div class="translation">
+                    远离一切颠倒迷乱的梦想和想法，最终达到圆满的解脱境界（涅槃）。
+                </div>
+            </div>
+
+            <div class="verse">
+                <span class="verse-number">9</span>
+                <div class="original">
+                    三世诸佛，依般若波罗蜜多故，得阿耨多罗三藐三菩提。
+                </div>
+                <div class="translation">
+                    过去、现在、未来所有的佛，都是依照般若波罗蜜多的教导修行，才证得无上正等正觉（最高智慧和觉悟）。
+                </div>
+            </div>
+
+            <div class="verse">
+                <span class="verse-number">10</span>
+                <div class="original">
+                    故知般若波罗蜜多，是大神咒，是大明咒，是无上咒，是无等等咒，能除一切苦，真实不虚。
+                </div>
+                <div class="translation">
+                    所以要知道，般若波罗蜜多咒语，具有巨大的神奇力量，是光明的咒语，是最高无上的咒语，是无与伦比的咒语。它能够消除一切痛苦，这是真实不虚的。
+                </div>
+            </div>
+
+            <div class="verse">
+                <span class="verse-number">11</span>
+                <div class="original">
+                    故说般若波罗蜜多咒，即说咒曰：揭谛揭谛，波罗揭谛，波罗僧揭谛，菩提萨婆诃。
+                </div>
+                <div class="translation">
+                    所以现在就宣说般若波罗蜜多咒语：去吧，去吧，到彼岸去吧，完全到彼岸去吧，觉悟成就！
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>🔑 核心词汇解释</h2>
+            <div class="key-terms">
+                <div class="term-card">
+                    <h3>般若 (Prajñā)</h3>
+                    <p>梵文意为"智慧"，但不是普通的聪明才智，而是了悟真理、通达空性的究竟智慧。</p>
+                </div>
+                <div class="term-card">
+                    <h3>波罗蜜多 (Pāramitā)</h3>
+                    <p>意为"度"、"到彼岸"、"究竟圆满"，指菩萨修行的六种或十种圆满品德。</p>
+                </div>
+                <div class="term-card">
+                    <h3>五蕴</h3>
+                    <p>构成人和世界的五种要素：色（物质）、受（感受）、想（想法）、行（行为）、识（意识）。</p>
+                </div>
+                <div class="term-card">
+                    <h3>空 (Śūnyatā)</h3>
+                    <p>不是"什么都没有"，而是一切事物都没有固定不变的自性，都是因缘和合、相互依存的。</p>
+                </div>
+                <div class="term-card">
+                    <h3>涅槃 (Nirvāṇa)</h3>
+                    <p>指解脱轮回之苦，达到圆满安宁的境界，是佛教修行的最终目标。</p>
+                </div>
+                <div class="term-card">
+                    <h3>观自在菩萨</h3>
+                    <p>即观世音菩萨，"观自在"强调其自证的境界，"观世音"强调其救度众生的功德。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>💡 心经要义</h2>
+            <p style="color: #ccc; margin-bottom: 20px; text-align: justify;">
+                《心经》的核心思想可以用一个字概括——<strong style="color: #ffd700;">空</strong>。
+                但这里的"空"并非消极的虚无，而是告诉我们：一切现象都是因缘和合、相互依存的，没有什么是独立永恒不变的。
+            </p>
+            <p style="color: #ccc; margin-bottom: 20px; text-align: justify;">
+                当我们真正理解并体会到这种空性智慧时，就能放下对自我、对事物的执著。
+                没有执著就没有痛苦，没有痛苦就能得到真正的自在和解脱。这就是《心经》要传达给我们的解脱之道。
+            </p>
+            <p style="color: #ccc; text-align: justify;">
+                经文最后的咒语"揭谛揭谛，波罗揭谛，波罗僧揭谛，菩提萨婆诃"
+                译为"去吧，去吧，到彼岸去吧，完全到彼岸去吧，觉悟成就！"
+                这是对修行者的鼓励和祝福，引导我们走向觉悟的彼岸。
+            </p>
+        </section>
+
+        <footer>
+            <p><span class="heart">🙏</span> 愿以此功德，普及于一切</p>
+            <p>我等与众生，皆共成佛道</p>
+            <p style="margin-top: 20px; font-size: 0.8em; color: #555;">
+                数据来源：<a href="https://www.guyushuo.com/fo/xinjing/xjbh.html" target="_blank" style="color: #888;">古语说 - 心经白话文翻译</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
